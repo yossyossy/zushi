@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // === 図の生成・プレビュー ===
+    "bierner.markdown-mermaid",            // MarkdownプレビューでMermaid表示
+    "hediet.vscode-drawio",                // draw.io統合・Confluence連携
+    "pomdtr.excalidraw-editor",            // フリーハンド・ブレスト用ホワイトボード
+    "gera2ld.markmap-vscode",              // マインドマップ自動生成
+
+    // === GitHub Copilot ===
+    "github.copilot-chat"                  // Copilot Chat・エージェントモード
+  ]
+}
