@@ -1,0 +1,7 @@
+---
+- name: postfix切り替え確認
+  hosts: "{{ target_hosts }}"
+  become: true
+  roles:
+    - role: postfix
+      tasks_from: verify_transport

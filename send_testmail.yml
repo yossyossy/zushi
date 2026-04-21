@@ -1,0 +1,7 @@
+---
+- name: テストメール送信
+  hosts: "{{ target_hosts }}"
+  become: true
+  roles:
+    - role: postfix
+      tasks_from: send_testmail

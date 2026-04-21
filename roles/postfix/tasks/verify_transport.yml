@@ -1,0 +1,11 @@
+---
+- name: transportファイルと予備機用ファイルの差分を確認
+  ansible.builtin.command:
+    cmd: diff /etc/postfix/transport /etc/postfix/transport_yobi
+  register: diff_result
+  changed_when: false
+  failed_when: diff_result.rc != 0
+
+- name: 確認結果を表示
+  ansible.builtin.debug:
+    msg: "transportファイルは予備機用設定と一致しています"

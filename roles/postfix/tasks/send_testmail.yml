@@ -1,0 +1,15 @@
+---
+- name: テストメール送信
+  ansible.builtin.shell:
+    cmd: >
+      echo "テスト送信" | mail
+      -s "セルフメニュー送信 $(date '+%Y%m%d%H%M')"
+      -r "{{ item }}"
+      "{{ mail_to }}"
+  loop:
+    - info@aozora.com
+    - info@daichi.com
+    - no-reply@umi.com
+    - no-reply@uchuu.com
+    - notify@meikai.com
+  changed_when: true

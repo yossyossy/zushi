@@ -1,0 +1,7 @@
+---
+- name: postfix予備機切り替え
+  hosts: "{{ target_hosts }}"
+  become: true
+  roles:
+    - role: postfix
+      tasks_from: switch_transport

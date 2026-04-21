@@ -1,0 +1,7 @@
+---
+- name: Teams通知
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: rhel_common
+      tasks_from: notify_teams
